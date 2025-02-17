@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-brown: #53423e;
+    --color-lightBrown: #645550;
+    --color-darkBrown: #2c2523;
+    --color-black: #1e1917;
+    --color-white: #f1e1d9;
+    --color-cyan: #15d1e9;
+    --color-lightCyan: #88e5f0;
+    --color-darkCyan: #009fb3;
+    --color-orange: #E69724;
+    --color-lightOrange: #fac27b;
+    --color-darkOrange: #d28422;
+    --color-grey: #626965;
+    --color-lightGrey: #978580;
+    --color-darkGrey: #3f4441;
+    --font-body: "Josefin Sans", "sans-serif";
+    --font-special: "Roboto", "sans-serif";
+    --boxShadow-cyanShadow: 0px 0px 20px 0px rgba(94, 206, 220, 0.5);
+    --boxShadow-cyanBigShadow: 10px 10px 1000px 500px rgba(94, 206, 220, 0.3);
+    --boxShadow-cyanMediumShadow: 10px 10px 200px 150px rgba(94, 206, 220, 0.5);
+    --boxShadow-orangeBigShadow: 10px 10px 10000px 500px rgba(240, 169, 79, 0.3);
+    --boxShadow-orangeMediumShadow: 10px 10px 2000px 150px rgba(240, 169, 79, 0.5);
+    --breakpoint-sm: 350px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1530px;
+}
+
+@layer utilities {
+    .shadow-cyanShadow {
+        box-shadow: var(--boxShadow-cyanShadow);
+    }
+
+    .hover\:shadow-cyanShadow:hover {
+        box-shadow: var(--boxShadow-cyanShadow);
+    }
+
+}
+
+body {
+    @apply bg-darkBrown
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
