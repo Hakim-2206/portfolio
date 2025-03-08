@@ -1,13 +1,14 @@
 import {PiHexagonThin} from "react-icons/pi";
+import img_hakim from "/images/photo_hakim.jpeg";
 
 const HeroImage = () => {
     return (
         <div className="relative self-end h-full w-full items-center justify-center">
             <div className=" h-full w-full">
                 <img
-                    src="/public/images/photo_hakim.jpeg"
-                    alt="Abdelrahman Qassem"
-                    className="w-auto h-auto md:max-w-[570px] sm:max-w-[380px] absolute bottom-[0px] z-10 left-[50%] -translate-x-[50%]"
+                    src={img_hakim}
+                    alt="Zaabi Hakim"
+                    className="w-auto h-auto md:max-w-[570px] sm:max-w-[380px] absolute bottom-[0px] z-10 left-[50%] -translate-x-[50%] rounded-full aspect-square object-cover"
                 />
                 <div className="w-full h-full absolute  bottom-[-20%] -z-10 flex justify-center items-center rotate-90">
                     <PiHexagonThin
